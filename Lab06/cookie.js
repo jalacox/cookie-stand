@@ -157,7 +157,7 @@ const lima = {
 
 let hours5 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
 let cookie5 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray5 = document.querySelector('.output')
+let hoursArray5 = document.querySelector('.output5')
 for(let i = 0; i < hoursDemo.length; i++) {
     let variable = document.createElement("li");
     variable.innerHTML = `${hours5[i]}: ${cookie5[i]} cookies`;
