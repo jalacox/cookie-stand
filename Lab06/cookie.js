@@ -30,7 +30,7 @@ const seattle = {
 let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
 let cookieDemo = seattle.getCookies(this.cookiesPerHour);
 let hoursArray = document.querySelector('.output')
-for(let i = 0; i < hoursDemo.length; i++) 
+for(let i = 0; i < hoursDemo.length; i++) {
     let variable = document.createElement("li");
     variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
     hoursArray.append(variable);
