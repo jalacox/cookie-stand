@@ -59,12 +59,12 @@ const tokyo = {
 
 }
 
-let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo = seattle.getCookies(this.cookiesPerHour);
-let hoursArray = document.querySelector('.output')
+let hours2 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+let cookie2 = seattle.getCookies(this.cookiesPerHour);
+let hoursArray2 = document.querySelector('.output2')
 for(let i = 0; i < hoursDemo.length; i++) {
     let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
+    variable.innerHTML = `${hours2[i]}: ${cookie2[i]} cookies`;
     hoursArray.append(variable);
 }
 
@@ -91,12 +91,12 @@ const dubai = {
 
 }
 
-let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray = document.querySelector('.output')
+let hours3 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+let cookie3 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
+let hoursArray3 = document.querySelector('.output3')
 for(let i = 0; i < hoursDemo.length; i++) {
     let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
+    variable.innerHTML = `${hours3[i]}: ${cookie3[i]} cookies`;
     hoursArray.append(variable);
 }
 
@@ -123,12 +123,12 @@ const paris = {
 
 }
 
-let hour = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray = document.querySelector('.output')
+let hour4 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+let cookie4 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
+let hoursArray4 = document.querySelector('.output4')
 for(let i = 0; i < hoursDemo.length; i++) {
     let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
+    variable.innerHTML = `${hours4[i]}: ${cookie4[i]} cookies`;
     hoursArray.append(variable);
 }
 
