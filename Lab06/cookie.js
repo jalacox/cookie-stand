@@ -163,3 +163,11 @@ for(let i = 0; i < hoursDemo.length; i++) {
     variable.innerHTML = `${hours5[i]}: ${cookie5[i]} cookies`;
     hoursArray.append(variable);
 }
+
+let tblDemo = document.createElement('table');
+let
+let tblDemo = document.createElement('tr');
+
+for (let i =0; i < hoursDemo.length; i++) {
+
+}
