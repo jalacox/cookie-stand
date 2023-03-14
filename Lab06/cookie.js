@@ -154,20 +154,113 @@ const lima = {
     },
 
 }
+// let SeattleSales = [];
+let TokyoSales = [];
+let DubaiSales = [];
+let ParisSales = [];
+let LimaSales = [];
+let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
 
-let hours5 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookie5 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray5 = document.querySelector('.output5')
-for(let i = 0; i < hoursDemo.length; i++) {
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hours5[i]}: ${cookie5[i]} cookies`;
-    hoursArray.append(variable);
+function cookieStandLocation(Storelocation) {
+    let stand = {};
+    stand.Storelocation = Storelocation;
+    stand.sales = [];
+
+    
+
+    stand.cph = function () {
+        for (let x = 0; x < 14; x += 1) {
+            stand.sales.push(Math.floor(Math.random() * 100 + 1));
+        }
+    }
+
+    stand.CPHmath = function(){
+        let initialValue = 0;
+        stand.sum = stand.sales.reduce((accumulator, currentValue) => accumulator + currentValue,initialValue);
+        stand.average = Math.floor(stand.sum / 14);
+        stand.max = Math.max(...stand.sales);
+        stand.min = Math.min(...stand.sales);
+    }
+
+    stand.render = function() {
+        // let tblDemo = document.createElement('table');
+        // let trArr = [];
+        let trData = document.createElement('tr'); 
+        let localeTD = document.createElement('td');
+        localeTD.innerHTML = this.Storelocation;
+        trData.append(localeTD);
+    
+        for (let i = 0; i < this.sales.length; i++) {
+            let tdSales = document.createElement('td');
+            tdSales.innerHTML = this.sales[i];
+            trData.append(tdSales);
+        }
+        let trTotal = document.createElement('td');
+        trTotal.innerHTML = this.sum;
+        trData.append(trTotal);
+        document.getElementById('DailyData').append(trData);
+
+        let trSubData = document.createElement('tr');
+        let localeTD2 = document.createElement('td');
+        localeTD2.innerHTML = this.Storelocation;
+        let trMin = document.createElement('td');
+        trMin.innerHTML = this.min;
+        let trMax = document.createElement('td');
+        trMax.innerHTML = this.max;
+        let trAvg = document.createElement('td');
+        trAvg.innerHTML = this.average;
+        trSubData.append(localeTD2, trMin, trMax, trAvg);
+        document.getElementById('DailySubData').append(trSubData);
+       }
+       stand.render2 = function(){}
+
+
+    return stand;
 }
+const seattle = cookieStandLocation('Seattle');
+seattle.cph();
+seattle.CPHmath();
+seattle.render();
 
-let tblDemo = document.createElement('table');
-let
-let tblDemo = document.createElement('tr');
+const tokyo = cookieStandLocation('Tokyo')
+tokyo.cph();
+tokyo.CPHmath();
+tokyo.render();
 
-for (let i =0; i < hoursDemo.length; i++) {
+const dubai = cookieStandLocation('Dubai')
+dubai.cph();
+dubai.CPHmath();
+dubai.render();
 
+const paris = cookieStandLocation('Paris')
+paris.cph();
+paris.CPHmath();
+paris.render();
+
+const lima = cookieStandLocation('Lima')
+lima.cph();
+lima.CPHmath();
+lima.render();
+
+let locationForm = document.getElementById('StorelocationForm')
+
+// let Storelocation = "";
+
+locationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let Storelocation = document.getElementById('locations').value;
+
+    if (Storelocation.values == ""){
+        alert("Inviald Storelocation")
+    }else{
+        alert("Store Storelocation saved")
+        console.log(`Storelocation is ${Storelocation}`)
+
+    }
+
+    let storelocation = cookieStandLocation(Storelocation);
+    storelocation.cph();
+    storelocation.CPHmath();
+    storelocation.render();
 }

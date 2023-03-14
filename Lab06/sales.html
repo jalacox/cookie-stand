@@ -17,184 +17,47 @@
       </nav>
     </h3>
     </center>
-
-    <section id="add-shop" class="full-width sticky-nav">
-      <div class="form">
-        <form id="add-shop-form">
-          <fieldset>
-            <legend>Add a New Store</legend>
-      
-            <label for="shopLocation">Shop Location: </label>
-            <input type="text" name="shopLocation">
-      
-            <label for="minCust">Minimum Customers per Hour: </label>
-            <input type="number" name="minCust">
-      
-            <label for="maxCust">Maximum Customers per Hour: </label>
-            <input type="number" name="maxCust">
-      
-            <label for="cookiesPerSale">Cookies per Sale</label>
-            <input type="number" name="cookiesPerSale" step="0.1">
-      
-            <button>Add a Store</button>
-          </fieldset>
+    
+    </div>
+    <div class="content">
+               <table id="DailyData">
+            <tr>
+                <th>locations</th>
+                <th>6am</th>
+                <th>7am</th>
+                <th>8am</th>
+                <th>9am</th>
+                <th>10am</th>
+                <th>11am</th>
+                <th>12pm</th>
+                <th>1pm</th>
+                <th>2pm</th>
+                <th>3pm</th>
+                <th>4pm</th>
+                <th>5pm</th>
+                <th>6pm</th>
+                <th>7pm</th>
+                <th>Daily Location Total</th>
+            </tr>
+        </table>
+        <br>
+        <table id="DailySubData">
+            <tr>
+                <th>Location</th>
+                <th>Min / Cust</th>
+                <th>Max / Cust</th>
+                <th>Avg Cookie / Sale</th>
+            </tr>
+        </table>
+        <br>
+        <form id="StorelocationForm">
+            <label>Enter a Location :</label>
+            <input type="text" id="locations">
+            <input type="submit">
         </form>
-      </div>
-    </section>
-    <section id="sales-graph" class="full-width">
-      <table id="cookies-sold"></table>
-    </section>
-    <script src="js/app.js"></script>
-    
-
-<body>
-  <div class="flex-box">
-    <div>
-      <ul class="output">
-        <h2>Seattle</h2>
-        <li></li>
-      </ul>
-  </div>
-
-  <div>
-    <ul class="output2">
-      <h2>Tokyo</h2>
-      <li></li>
-    </ul>
-</div>
-
-<div>
-  <ul class="output3">
-    <h2>Dubai</h2>
-    <li></li>
-  </ul>
-</div>
-
-<div>
-  <ul class="output4">
-    <h2>Paris</h2>
-    <li></li>
-  </ul>
-</div>
-
-<div>
-  <ul class="output5">
-    <h2>Lima</h2>
-    <li></li>
-  </ul>
-</div>
-  </div>
-</body>    
-
-
-  <table style="width:100%">
-    <tr>
-      <th></th>
-    <th>6:00am</th>
-    <th>7:00am</th>
-    <th>8:00am</th>
-    <th>9:00am</th>
-    <th>10:00am</th>
-    <th>11:00am</th>
-    <th>12:00pm</th>
-    <th>1:00pm</th>
-    <th>2:00pm</th>
-    <th>3:00pm</th>
-    <th>4:00pm</th>
-    <th>5:00pm</th>
-    <th>6:00pm</th>
-    <th>7:00pm</th>
-    
-  </tr>
-  <tr>
-    <th>Seattle</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Tokyo</th>  
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <th>Dubai</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-      <th>Paris</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-
-      
-      </tr>
-      <tr>
-        <th>Lima</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-        </tr>
-        <tr> 
-  </table>
+    </div>
+   
+    <script src="cookie.js" async defer></script>
+</body>
 
 </html>
